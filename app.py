@@ -195,6 +195,17 @@ def calculate_nutrition(user, session, objective):
     elif objective == "Tirada Larga (Endurance)":
         cho_h = 60
         obj_tip = "🎯 Objetivo: Resistencia. El enfoque debe ser la hidratación constante y soporte energético."
+    elif objective == "Competición Oficial":
+        dist = session.get('total_distance', 0)
+        if dist > 30000: # Maratón
+            cho_h = 90
+            obj_tip = "🥇 **Competición: MARATÓN**. Máxima exigencia. Objetivo: 80-100g CHO/h (si ha sido entrenado) y carga de sodio previa."
+        elif dist > 15000: # Media Maratón
+            cho_h = 75
+            obj_tip = "🥈 **Competición: MEDIA MARATÓN**. Ritmo umbral constante. Objetivo: 60-80g CHO/h para optimizar el rendimiento final."
+        else:
+            cho_h = 60
+            obj_tip = "🏅 **Competición Oficial**. Ritmo alto. Prioriza carbohidratos de absorción rápida y electrolitos."
 
     hydration = hours * 750 # Slightly more aggressive hydration
     total_cho = cho_h * hours
@@ -351,7 +362,8 @@ if uploaded_file:
             "Ritmo Maratón", 
             "Intervalos VO2max", 
             "Sesión Suave (Recuperación)", 
-            "Tirada Larga (Endurance)"
+            "Tirada Larga (Endurance)",
+            "Competición Oficial"
         ]
         session_obj = st.selectbox("¿Qué buscabas hoy?", objectives, index=4)
 
