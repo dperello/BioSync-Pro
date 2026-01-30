@@ -332,6 +332,12 @@ with st.sidebar:
     *   **[Marco Altini](https://www.marcoaltini.com/):** Experto en HRV y Biofeedback. [[Twitter](https://twitter.com/altini_marco)]
     
     *Umbral crítico: > 5% indica fatiga o estrés térmico.*
+    
+    ---
+    #### 👨‍💻 Autor
+    **David Perelló**  
+    📸 [Instagram: @davidoutdoorsports](https://www.instagram.com/davidoutdoorsports)  
+    📧 [dperello33@gmail.com](mailto:dperello33@gmail.com)
     """)
 
 if uploaded_file:
@@ -638,4 +644,7 @@ else:
     *   **Efficiency Factor (EF)**: Ratio of output (Normalized Speed) to input (Heart Rate).
     *   **Cardiac Drift**: The percentage loss of efficiency between the first and second half of a steady-state effort.
     *   **Interpretation**: Drift < 5% indicates good aerobic fitness for the intensity. > 5% indicates physiological strain (heat, dehydration, or fatigue).
+    
+    ---
+    Developed by **David Perelló** | [Instagram @davidoutdoorsports](https://www.instagram.com/davidoutdoorsports) | dperello33@gmail.com
     """)

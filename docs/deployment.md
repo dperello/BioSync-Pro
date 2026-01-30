@@ -1,19 +1,24 @@
-# Documentación de Despliegue - BioSync Pro
+## 1. Acceso a la Aplicación
+**URL Definitiva:** [https://biosync-pro.streamlit.app/](https://biosync-pro.streamlit.app/)
 
-## 1. Repositorio GitHub
+## 2. Repositorio GitHub
 El código se encuentra alojado en: `https://github.com/dperello/BioSync-Pro`
 
-## 2. Instrucciones para actualización manual
-Si deseas subir cambios manualmente desde tu terminal, utiliza estos comandos:
+## 3. Instrucciones para actualización manual
+Cuando hagas un cambio en el código local (`app.py`, etc.), sigue estos 3 pasos para que se reflejen en la web:
 
 ```bash
-# Añadir cambios
+# 1. Preparar los archivos
 git add .
-# Crear commit
-git commit -m "Descripción de los cambios"
-# Subir al servidor
+# 2. Guardar el cambio localmente
+git commit -m "Descripción de tu nueva mejora"
+# 3. Subir a la nube
 git push origin main
 ```
+
+### ⏱️ ¿Cuánto tarda en replicarse?
+- **Tiempo:** Suele tardar entre **30 y 60 segundos**.
+- **Proceso:** Streamlit Cloud detecta el `push` automáticamente, reinstala las librerías (si has cambiado `requirements.txt`) y reinicia el servidor. Veras un pequeño icono de "Building" o "Processing" en la esquina inferior derecha de tu web durante ese tiempo.
 
 ## 3. Despliegue en Streamlit Cloud
 1. Entra en [Streamlit Community Cloud](https://streamlit.io/cloud).

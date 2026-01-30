@@ -9,3 +9,4 @@ ENV/
 .streamlit/
 *.fit
 !example\ fit/*.fit
+docs/credentials.md
